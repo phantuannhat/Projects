@@ -22,8 +22,9 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(BUTTON), changeCycle, FALLING);
 }
 
-int getTime, half_Cycle = 250;
-bool current_Cycle, last_Cycle;
+int half_Cycle = 250;
+unsigned long getTime = 0;
+bool current_Cycle = false, last_Cycle = false;
 bool interrupt_Occurred = false;
 
 void loop() {
